@@ -20,7 +20,19 @@ export default class App {
     }
 
     obtenerDivisibles(numero) {
-     
+     let divisibles = 0;
+        let i = numero;
+        do{
+            if(numero % i == 0) {
+            divisibles = divisibles + 1;
+            }
+            i = i - 1;
+
+        }while(i>0)
+
+        return divisibles;
+    
+        
  }
 
 }
@@ -28,3 +40,4 @@ export default class App {
 let app = new App();
 console.log(app.factorial(5));
 console.log(app.convertirAString(5));
+console.log(app.obtenerDivisibles(5));
