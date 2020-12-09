@@ -35,9 +35,18 @@ export default class App {
         
  }
 
+ elevar(numero, potencia) {
+     let operacion = 1;
+     for(let x = 0; x < potencia; x = x + 1) {
+         operacion = operacion * numero;
+     }
+     return operacion;
+ }
+
 }
 
 let app = new App();
 console.log(app.factorial(5));
 console.log(app.convertirAString(5));
 console.log(app.obtenerDivisibles(5));
+console.log(app.elevar(2, 3));
